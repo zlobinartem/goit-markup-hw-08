@@ -1,0 +1,134 @@
+.footer {
+    padding: 60px 0;
+    background-color: $accent-white-color;
+}
+
+.container__footer {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+
+    @media screen and (max-width: 767px) {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    @media screen and (max-width: 1199px) {
+        column-gap: 165px;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+    }
+}
+
+.footer__column {
+    &:not(:last-child) {
+        @media screen and (max-width: 1199px) {
+            margin-bottom: 60px;
+        }
+    }
+}
+
+.logo__footer {
+    color: $sub-text-color;
+}
+
+.address {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.5;
+    font-style: normal;
+}
+
+.address__contact {
+    margin-top: 8px;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.6);
+
+    @include transition(color);
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin-top: 9px;
+    }
+}
+
+.address__map {
+    text-decoration: none;
+    color: $sub-text-color;
+
+    @include transition(color);
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+}
+
+.footer-form {
+    display: flex;
+    gap: 12px;
+
+    @media screen and (max-width: 767px) {
+        display: block;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.footer-form__input {
+    width: 100%;
+    height: 50px;
+    padding-left: 16px;
+    line-height: 1.25;
+    color: rgba(255, 255, 255, 0.6);
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+
+    @media screen and (min-width: 768px) {
+        width: 450px;
+    }
+
+    @media screen and (max-width: 1199px) {
+        margin-bottom: 20px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: 358px;
+    }
+}
+
+.footer-form__button {
+    @include centeredFlex(inline-flex);
+    width: 200px;
+    height: 50px;
+    letter-spacing: 0.06em;
+    line-height: 1.88;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: $secondary-white-color;
+    background: $accent-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
+}
+
+.footer-form__icon {
+    margin-left: 12px;
+
+    @media screen and (min-width: 1200px) {
+        margin-left: 10px;
+    }
+}

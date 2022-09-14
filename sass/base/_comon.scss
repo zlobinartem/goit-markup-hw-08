@@ -1,0 +1,94 @@
+body {
+    font-family: 'Roboto', 'Raleway', sans-serif;
+    font-family: 'Roboto';
+    color: var(--main-text);
+    &.modal-open {
+        overflow: hidden;
+    }
+    &.scrol-off {
+    @media screen and (max-width: 767px) {
+        overflow: hidden;
+        }
+    }
+}
+
+.container {
+    min-width: 250px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    @media screen and (min-width: 480px) {
+        width: $mobile;
+    }
+
+    @media screen and (min-width: 768px) {
+        width: $tablet;
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: $desktop;
+    }
+}
+
+.titlle {
+    margin-bottom: 30px;
+    font-size: 28px;
+    line-height: 1.17;
+    text-align: center;
+
+    @media screen and (min-width: 1200px) {
+        font-size: 36px;
+        margin-bottom: 50px;
+    }
+}
+
+.section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @media screen and (min-width: 1200px) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
+}
+
+.column__titlle {
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: $sub-text-color;
+}
+@mixin centeredFlex($type: flex) {
+    display: $type;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin border-bottom($color) {
+    border-bottom: 1px solid $color;
+}
+
+@mixin borders($color) {
+    border: 1px solid $color;
+}
+
+@mixin transition($type) {
+    transition: $type $duration $cubic;
+}
+
+@mixin transparent() {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
