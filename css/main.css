@@ -759,8 +759,12 @@ body.modal-open {
 }
 
 .feature-list__text {
+  text-align: start;
   font-size: 14px;
   line-height: 1.71;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  color: #757575;
 }
 
 .trend {
